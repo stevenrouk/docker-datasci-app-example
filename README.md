@@ -10,11 +10,18 @@ Created using the tutorial by [Data Dan](http://www.datadan.io/containerized-dat
 
 ### Running It
 
+First, clone the GitHub repo and cd into the directory.
+
+```bash
+git clone https://github.com/stevenrouk/docker-datasci-app-example.git
+cd docker-datasci-app-example
+```
+
+If you need to install Docker, follow the instructions here: [Docker Installation Instructions](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
+
 ```bash
 sudo docker build --force-rm=true -t pythoniris .
 sudo docker run --net host -d --name myiris pythoniris
-sudo docker stop myiris
-sudo docker rm myiris
 ```
 
 Head to http://localhost:5000/prediction?slength=0.1&swidth=0.1&plength=0.1&pwidth=0.1 and get a prediction!
@@ -27,9 +34,16 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
+To remove the docker image:
+
+```bash
+sudo docker stop myiris
+sudo docker rm myiris
+```
+
 ---
 
-### Pulling a Basic Python Image, Then Creating Your Own
+### Pulling a Basic Docker Python Image, Then Creating Your Own
 
 Here's a simple example of getting a Docker image with python already installed, then creating your own image from it that has your code on it, and running that.
 
