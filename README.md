@@ -1,8 +1,10 @@
 # Creating a Python REST API using sklearn and Docker
 
-http://www.datadan.io/containerized-data-science-and-engineering-part-2-dockerized-data-science/
+In this application, we use the Python machine learning library scikit-learn to make predictions of Iris species given measurements.
 
-This is so cool!
+The app is presented as a REST API (using Flask-RESTful) that returns JSON data, and the whole thing is packaged up in a Docker container.
+
+Created using the tutorial by [Data Dan](http://www.datadan.io/containerized-data-science-and-engineering-part-2-dockerized-data-science/).
 
 ---
 
